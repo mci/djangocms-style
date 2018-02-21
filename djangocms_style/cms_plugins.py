@@ -9,7 +9,7 @@ from .models import Style
 
 class StylePlugin(CMSPluginBase):
     model = Style
-    name = _('Style')
+    name = _('Style_DjangoCMS')
     render_template = 'djangocms_style/style.html'
     allow_children = True
 
@@ -47,5 +47,5 @@ class StylePlugin(CMSPluginBase):
         context['inline_styles'] = instance.get_styles()
         return super(StylePlugin, self).render(context, instance, placeholder)
 
-
+StylePlugin.__name__ = 'DjangoCMSStylePlugin'
 plugin_pool.register_plugin(StylePlugin)
