@@ -60,7 +60,7 @@ def migrateStyle(old_plugin):
 
     return new_plugin
 
-def convert_aldryn_to_djangocms_style()
+def convert_aldryn_to_djangocms_style():
     for style in Style.objects.all():
         new_plugin = migrateStyle(style)
     dstyles = CMSPlugin.objects.filter(plugin_type='DjangoCMSStylePlugin')
