@@ -54,7 +54,7 @@ def migrateStyle(old_plugin):
     # in case this is a child of a TextPlugin that needs
     # its content updated with the newly copied plugin
     if new_plugin.parent:
-        parent.post_copy(parent, [(new_plugin, old_plugin),])
+        new_plugin.parent.post_copy(new_plugin.parent, [(new_plugin, old_plugin),])
         
     old_plugin.delete()
 
